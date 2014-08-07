@@ -1,23 +1,23 @@
 .. currentmodule:: Base
 
 **********************
- The Standard Library
+ Julia 标准库
 **********************
 
-Introduction
+介绍
 ------------
 
-The Julia standard library contains a range of functions and macros appropriate for performing scientific and numerical computing, but is also as broad as those of many general purpose programming languages.  Additional functionality is available from a growing collection of :ref:`available-packages`. Functions are grouped by topic below.  
+Julia标准库包括了大量的专门为了科学及数值计算而准备的函数和宏,同时也囊括了其它 ``通用编程语言`` 中常见的函数. 第三方包可以在 :ref:`available-packages` 中找到. 自带函数将在下面分组进行细说.
 
-Some general notes:
+注意:
 
-* Except for functions in built-in modules (:mod:`~Base.Pkg`, :mod:`~Base.Collections`, :mod:`~Base.Graphics`,
-  :mod:`~Base.Test` and :mod:`~Base.Profile`), all functions documented here are directly available for use in programs.
-* To use module functions, use ``import Module`` to import the module, and ``Module.fn(x)`` to use the functions.
-* Alternatively, ``using Module`` will import all exported ``Module`` functions into the current namespace.
-* By convention, function names ending with an exclamation point (``!``) modify their arguments.  Some functions have both modifying (e.g., ``sort!``) and non-modifying (``sort``) versions.
+* 除了内置模块的函数 (:mod:`~Base.Pkg`, :mod:`~Base.Collections`, :mod:`~Base.Graphics`,
+  :mod:`~Base.Test` and :mod:`~Base.Profile`)之外，所有在这儿出现的函数都可以在不需要额外导入包的情况下直接在Julia中使用。
+* 如果要使用某个模块下的函数，使用 ``import Module`` 来导入这个模块，并且使用 ``Module.fn(x)`` 来使用这个函数。
+* 此外， ``using Module`` 作为一个便捷指令，会把指定的包中所有导出的函数导入到当前命名空间。
+* 按照惯例，以感叹号 (``!``) 结尾的函数可能对它们的参数内容进行修改。比如 ``sort!`` 函数以及它的不修改参数内容的版本 ``sort`` 函数。
 
-Getting Around
+正文
 --------------
 
 .. function:: exit([code])
